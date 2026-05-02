@@ -398,6 +398,19 @@
     .portfolio-card-body p { font-size: 0.84rem; color: var(--muted); line-height: 1.6; margin-bottom: .9rem; }
     .portfolio-meta { font-size: 0.78rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; }
 
+    /* ── GALLERY ── */
+    .modal-gallery { position: relative; }
+    .gallery-thumbs {
+      display: flex; gap: 8px; padding: 10px 14px;
+      background: var(--dark2); overflow-x: auto;
+    }
+    .gallery-thumb {
+      width: 80px; height: 54px; object-fit: cover; border-radius: 8px;
+      cursor: pointer; border: 2px solid transparent; opacity: 0.65;
+      transition: opacity .2s, border-color .2s; flex-shrink: 0;
+    }
+    .gallery-thumb:hover, .gallery-thumb.active { opacity: 1; border-color: var(--primary); }
+
     /* ── MODAL ── */
     .modal-backdrop {
       position: fixed; inset: 0; z-index: 200;
@@ -947,8 +960,263 @@
       </div>
     </div>
 
+    <!-- CARD 2 -->
+    <div class="portfolio-card" onclick="openModal('modal-workday-support')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-workday-support-1.png" alt="Workday Daily Support & Training" />
+        <div class="portfolio-overlay">
+          <span>View Details</span>
+        </div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">ERP / CRM Software</span>
+        <h3>Workday Daily Support &amp; Training</h3>
+        <p>Comprehensive Workday support, troubleshooting, module expertise, and customized training programs for HR, finance &amp; operations teams.</p>
+        <div class="portfolio-meta">
+          <span>🖼 3 images</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- MODAL: WORKDAY SUPPORT & TRAINING -->
+<div class="modal-backdrop" id="modal-workday-support" onclick="closeModal(event, 'modal-workday-support')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-workday-support').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <!-- Image gallery -->
+    <div class="modal-gallery">
+      <div class="gallery-main">
+        <img id="gallery-support-main" src="portfolio-workday-support-1.png" alt="Workday Daily Support" class="modal-img" style="border-radius:20px 20px 0 0;cursor:default;" />
+      </div>
+      <div class="gallery-thumbs">
+        <img src="portfolio-workday-support-1.png" onclick="document.getElementById('gallery-support-main').src=this.src" class="gallery-thumb active" alt="img 1"/>
+        <img src="portfolio-workday-support-2.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 2"/>
+        <img src="portfolio-workday-support-3.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 3"/>
+      </div>
+    </div>
+    <div class="modal-body">
+      <span class="portfolio-cat">ERP / CRM Software</span>
+      <h2>Workday Daily Support &amp; Training</h2>
+      <p>This section highlights our agency's expertise in providing comprehensive Workday support and training services. We help organizations optimize their Workday environment, resolve daily issues efficiently, and empower teams with practical knowledge to maximize system utilization.</p>
+      <p><strong style="color:var(--light)">Our Workday Support &amp; Training Services Include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>Daily Workday Support:</strong> Troubleshooting, issue resolution, and system monitoring</li>
+        <li>✅ <strong>Module Expertise:</strong> HCM Core, Reporting, Advanced Reporting, Recruiting, Talent &amp; Performance, Absence, Security, Benefits, Finance, and more</li>
+        <li>✅ <strong>User Assistance &amp; Guidance:</strong> Helping end-users navigate Workday efficiently</li>
+        <li>✅ <strong>Workday Training Programs:</strong> Customized sessions for HR, finance, and operations teams</li>
+        <li>✅ <strong>Process Optimization:</strong> Streamlining workflows and automating routine tasks</li>
+        <li>✅ <strong>Reporting &amp; Analytics Support:</strong> Assisting with standard and custom report creation</li>
+        <li>✅ <strong>Security &amp; Access Management:</strong> Ensuring proper roles, permissions, and compliance</li>
+        <li>✅ <strong>Knowledge Transfer:</strong> Providing documentation and tips for long-term self-sufficiency</li>
+      </ul>
+      <p>We ensure that every Workday solution we provide is timely, accurate, and tailored to client needs, enabling organizations to maximize their Workday investment and improve operational efficiency.</p>
+    </div>
+  </div>
+</div>
+
+    <!-- CARD 3: MOBILE -->
+    <div class="portfolio-card" onclick="openModal('modal-mobile')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-mobile-1.png" alt="Modern App Development Solutions" />
+        <div class="portfolio-overlay"><span>View Details</span></div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">Mobile Development</span>
+        <h3>Modern App Development Solutions</h3>
+        <p>Cross-platform iOS &amp; Android apps with Flutter &amp; React Native — e-commerce, booking, social, and real-time features.</p>
+        <div class="portfolio-meta"><span>🖼 2 images</span></div>
+      </div>
+    </div>
+
+    <!-- CARD 4: AI -->
+    <div class="portfolio-card" onclick="openModal('modal-ai')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-ai-1.png" alt="Next-Gen AI-Powered Applications" />
+        <div class="portfolio-overlay"><span>View Details</span></div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">AI Apps &amp; Integration</span>
+        <h3>Next-Gen AI-Powered Applications</h3>
+        <p>Smart assistants, prediction engines, AI dashboards, and generative AI apps — fully integrated into modern mobile &amp; web platforms.</p>
+        <div class="portfolio-meta"><span>🖼 2 images</span></div>
+      </div>
+    </div>
+
+    <!-- CARD 5: DATA -->
+    <div class="portfolio-card" onclick="openModal('modal-data')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-data.png" alt="Data Engineering Excellence" />
+        <div class="portfolio-overlay"><span>View Details</span></div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">Data Extraction / ETL</span>
+        <h3>Data Engineering Excellence</h3>
+        <p>End-to-end ETL pipelines, data warehousing on Snowflake/Redshift/BigQuery, real-time streaming with Kafka, and cloud data lake builds.</p>
+        <div class="portfolio-meta"><span>📅 Single image</span></div>
+      </div>
+    </div>
+
+    <!-- CARD 6: AI/ML -->
+    <div class="portfolio-card" onclick="openModal('modal-aiml')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-aiml.png" alt="AI/ML & Data Science Solutions" />
+        <div class="portfolio-overlay"><span>View Details</span></div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">AI &amp; Machine Learning</span>
+        <h3>AI/ML &amp; Data Science Solutions</h3>
+        <p>ML models for prediction &amp; scoring, AI-driven analytics dashboards, end-to-end Python workflows, and responsive ML-integrated apps.</p>
+        <div class="portfolio-meta"><span>📅 May 8, 2025</span></div>
+      </div>
+    </div>
+
+    <!-- CARD 7: DEVOPS -->
+    <div class="portfolio-card" onclick="openModal('modal-devops')">
+      <div class="portfolio-img-wrap">
+        <img src="portfolio-devops.png" alt="DevOps & Cloud Infrastructure" />
+        <div class="portfolio-overlay"><span>View Details</span></div>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-cat">DevOps &amp; Solution Architecture</span>
+        <h3>DevOps &amp; Cloud Infrastructure</h3>
+        <p>CI/CD pipelines, Docker &amp; Kubernetes, AWS/Azure/GCP deployments, IaC with Terraform, and full monitoring with Prometheus &amp; Grafana.</p>
+        <div class="portfolio-meta"><span>📅 Single image</span></div>
+      </div>
+    </div>
+
+<!-- MODAL: MOBILE -->
+<div class="modal-backdrop" id="modal-mobile" onclick="closeModal(event, 'modal-mobile')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-mobile').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <div class="modal-gallery">
+      <img id="gallery-mobile-main" src="portfolio-mobile-1.png" alt="Modern App Development" class="modal-img" style="border-radius:20px 20px 0 0;" />
+      <div class="gallery-thumbs">
+        <img src="portfolio-mobile-1.png" onclick="switchGallery('gallery-mobile-main',this,'modal-mobile')" class="gallery-thumb active" alt="img 1"/>
+        <img src="portfolio-mobile-2.png" onclick="switchGallery('gallery-mobile-main',this,'modal-mobile')" class="gallery-thumb" alt="img 2"/>
+      </div>
+    </div>
+    <div class="modal-body">
+      <span class="portfolio-cat">Mobile Development</span>
+      <h2>Modern App Development Solutions</h2>
+      <p>This portfolio section showcases our agency's recent work in mobile and web application development, delivering fast, modern, and user-friendly digital experiences. Our team builds fully responsive applications that work seamlessly across Android, iOS, tablets, and web platforms.</p>
+      <p><strong style="color:var(--light)">Our recent app development projects include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>Custom mobile apps</strong> built with Flutter, React Native, and native technologies</li>
+        <li>✅ <strong>High-performance web applications</strong> using React, Next.js, and Django/Flask backends</li>
+        <li>✅ <strong>API-driven architectures,</strong> including RESTful and GraphQL APIs</li>
+        <li>✅ <strong>E-commerce, booking,</strong> and service-based applications</li>
+        <li>✅ <strong>Secure payment gateway</strong> integrations</li>
+        <li>✅ <strong>Real-time features</strong> like chats, notifications, tracking, and dashboards</li>
+        <li>✅ <strong>Fully responsive UI/UX</strong> optimized for all screen sizes</li>
+        <li>✅ <strong>Cloud-integrated applications</strong> with AWS, Firebase, and Supabase</li>
+      </ul>
+      <p>We focus on building applications that are scalable, smooth, and visually consistent across devices, ensuring a premium user experience from mobile to desktop.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: AI -->
+<div class="modal-backdrop" id="modal-ai" onclick="closeModal(event,'modal-ai')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-ai').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <div class="modal-gallery">
+      <img id="gallery-ai-main" src="portfolio-ai-1.png" alt="Next-Gen AI" class="modal-img" style="border-radius:20px 20px 0 0;" />
+      <div class="gallery-thumbs">
+        <img src="portfolio-ai-1.png" onclick="switchGallery('gallery-ai-main',this,'modal-ai')" class="gallery-thumb active" alt="img 1"/>
+        <img src="portfolio-ai-2.png" onclick="switchGallery('gallery-ai-main',this,'modal-ai')" class="gallery-thumb" alt="img 2"/>
+      </div>
+    </div>
+    <div class="modal-body">
+      <span class="portfolio-cat">AI Apps &amp; Integration</span>
+      <h2>Next-Gen AI-Powered Applications</h2>
+      <p>This section highlights our agency's recent work building AI-powered mobile and web applications designed to automate workflows, enhance user experiences, and deliver data-driven intelligence. Our solutions integrate advanced machine learning and generative AI models directly into modern, responsive applications that run seamlessly on desktop, tablet, and mobile.</p>
+      <p><strong style="color:var(--light)">Our recent AI-powered app projects include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>Smart assistants &amp; chatbots</strong> powered by NLP and LLMs</li>
+        <li>✅ <strong>Prediction and recommendation engines</strong> for smarter decision-making</li>
+        <li>✅ <strong>AI-driven analytics dashboards</strong> with real-time insights</li>
+        <li>✅ <strong>Automated workflows</strong> that reduce manual tasks and improve efficiency</li>
+        <li>✅ <strong>Image, text, and voice processing</strong> applications</li>
+        <li>✅ <strong>AI-integrated mobile and web apps</strong> with intuitive, user-friendly interfaces</li>
+        <li>✅ <strong>Custom AI APIs</strong> embedded into existing platforms and business systems</li>
+      </ul>
+      <p>We deliver applications that combine clean UI/UX, strong performance, and powerful AI capabilities, giving clients the perfect balance of innovation and usability.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: DATA -->
+<div class="modal-backdrop" id="modal-data" onclick="closeModal(event,'modal-data')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-data').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <img src="portfolio-data.png" alt="Data Engineering Excellence" class="modal-img" style="border-radius:20px 20px 0 0;" />
+    <div class="modal-body">
+      <span class="portfolio-cat">Data Extraction / ETL</span>
+      <h2>Data Engineering Excellence | ETL, Cloud &amp; Big Data</h2>
+      <p>This section showcases our agency's recent work in data engineering, pipeline development, and large-scale data processing. Our team builds reliable, scalable, and high-performance data infrastructures that power analytics, machine learning, and business intelligence across multiple industries.</p>
+      <p><strong style="color:var(--light)">Our Recent Projects Include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>End-to-end ETL/ELT pipelines</strong> using Python, SQL, Airflow, and cloud-native tools</li>
+        <li>✅ <strong>Data warehousing solutions</strong> on Snowflake, Redshift, BigQuery, and Azure Synapse</li>
+        <li>✅ <strong>Real-time data streaming</strong> with Kafka, Kinesis, and Spark</li>
+        <li>✅ <strong>Data modeling &amp; schema design</strong> for analytics and reporting</li>
+        <li>✅ <strong>Building and optimizing data lakes</strong> on AWS, GCP, and Azure</li>
+        <li>✅ <strong>Automation of data workflows</strong> to reduce manual overhead</li>
+        <li>✅ <strong>High-quality, production-grade</strong> data integrations across systems</li>
+        <li>✅ <strong>Performance tuning &amp; scalability improvements</strong> for large datasets</li>
+      </ul>
+      <p>We ensure that every data solution we build is robust, automated, and analytics-ready, enabling businesses to transform raw data into powerful insights and long-term growth.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: AI/ML -->
+<div class="modal-backdrop" id="modal-aiml" onclick="closeModal(event,'modal-aiml')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-aiml').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <img src="portfolio-aiml.png" alt="AI/ML & Data Science" class="modal-img" style="border-radius:20px 20px 0 0;" />
+    <div class="modal-body">
+      <span class="portfolio-cat">AI &amp; Machine Learning</span>
+      <h2>AI/ML &amp; Data Science Solutions</h2>
+      <div class="modal-meta">📅 Completed: May 8, 2025</div>
+      <p>This showcase highlights some of our agency's recent work delivering AI-powered Python solutions across multiple industries. From intelligent data analysis to full machine-learning system development, our team builds scalable, production-ready applications that integrate seamlessly with modern web and mobile interfaces.</p>
+      <p><strong style="color:var(--light)">Our recent projects include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>Machine Learning models</strong> for prediction, scoring, and automation</li>
+        <li>✅ <strong>AI-driven analytics dashboards</strong> for data-heavy businesses</li>
+        <li>✅ <strong>End-to-end Python workflows</strong> for data processing and reporting</li>
+        <li>✅ <strong>Responsive application integration</strong> connecting ML engines with frontend platforms</li>
+      </ul>
+      <p>Our solutions adapt flawlessly across devices — desktop, tablet, and mobile — ensuring fast performance, deep insights, and a smooth user experience.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: DEVOPS -->
+<div class="modal-backdrop" id="modal-devops" onclick="closeModal(event,'modal-devops')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-devops').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <img src="portfolio-devops.png" alt="DevOps & Cloud Infrastructure" class="modal-img" style="border-radius:20px 20px 0 0;" />
+    <div class="modal-body">
+      <span class="portfolio-cat">DevOps &amp; Solution Architecture</span>
+      <h2>DevOps &amp; Cloud Infrastructure Solutions</h2>
+      <p>This section highlights our agency's recent work in DevOps engineering, cloud automation, and CI/CD pipeline development. Our team designs and implements scalable, secure, and high-performance infrastructure environments that support modern applications across all devices and platforms.</p>
+      <p><strong style="color:var(--light)">Our recent DevOps projects include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>CI/CD pipeline setup</strong> using GitHub Actions, GitLab CI, Jenkins, and Bitbucket</li>
+        <li>✅ <strong>Containerization &amp; orchestration</strong> with Docker and Kubernetes</li>
+        <li>✅ <strong>Cloud deployments</strong> on AWS, Azure, and GCP</li>
+        <li>✅ <strong>Infrastructure as Code (IaC)</strong> using Terraform and CloudFormation</li>
+        <li>✅ <strong>Monitoring &amp; logging solutions</strong> with Prometheus, Grafana, ELK, and CloudWatch</li>
+        <li>✅ <strong>Automated scaling, load balancing</strong> &amp; server optimization</li>
+        <li>✅ <strong>Secure DevOps workflows</strong> with automated testing and vulnerability scanning</li>
+      </ul>
+      <p>We ensure that every system we build is robust, automated, and production-ready, helping clients achieve faster releases, higher stability, and fully optimized cloud operations.</p>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL: WORKDAY -->
 <div class="modal-backdrop" id="modal-workday" onclick="closeModal(event, 'modal-workday')">
@@ -1243,6 +1511,13 @@
     });
   }, { threshold: 0.5 });
   heroObserver.observe(document.getElementById('hero'));
+
+  // ── GALLERY SWITCH ──
+  function switchGallery(mainId, thumb, modalId) {
+    document.getElementById(mainId).src = thumb.src;
+    document.querySelectorAll('#' + modalId + ' .gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
 
   // ── MODAL ──
   function openModal(id) {
