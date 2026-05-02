@@ -53,7 +53,7 @@
       transition: background 0.3s;
     }
     .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .nav-logo img { height: 42px; width: auto; filter: brightness(0) invert(1); }
+    .nav-logo img { height: 42px; width: auto; background: #fff; border-radius: 8px; padding: 3px; }
     .nav-logo span { font-size: 1.15rem; font-weight: 700; color: var(--light); letter-spacing: 0.02em; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
@@ -98,7 +98,7 @@
     }
     .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
-    .hero-logo { width: 110px; height: auto; margin-bottom: 1.5rem; filter: brightness(0) invert(1); animation: float 4s ease-in-out infinite; }
+    .hero-logo { width: 110px; height: auto; margin-bottom: 1.5rem; background: #fff; border-radius: 16px; padding: 10px; animation: float 4s ease-in-out infinite; }
     @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1;
@@ -296,7 +296,7 @@
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
     }
     .footer-brand { display: flex; align-items: center; gap: 12px; }
-    .footer-brand img { height: 38px; filter: brightness(0) invert(1); }
+    .footer-brand img { height: 38px; background: #fff; border-radius: 8px; padding: 3px; }
     .footer-brand span { font-size: 1rem; font-weight: 700; color: var(--light); }
     .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .footer-links a { color: var(--muted); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
