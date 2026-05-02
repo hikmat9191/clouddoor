@@ -248,8 +248,10 @@
     /* ── CONTACT ── */
     #contact { background: var(--dark); }
     .contact-wrapper {
-      display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start; max-width: 600px;
+      display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;
     }
+    .contact-info h3 { font-size: 2rem; font-weight: 800; color: var(--light); margin: .5rem 0 1rem; }
+    .contact-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
     .contact-info { }
     .contact-info h3 { font-size: 1.5rem; font-weight: 800; color: var(--light); margin-bottom: 1rem; }
     .contact-info p { color: var(--muted); line-height: 1.7; margin-bottom: 2rem; }
