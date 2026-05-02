@@ -376,10 +376,11 @@
       background: var(--dark3); border: 1px solid var(--border);
       border-radius: 18px; overflow: hidden; cursor: pointer;
       transition: transform .25s, box-shadow .25s, border-color .25s;
+      min-width: 0;
     }
     .portfolio-card:hover { transform: translateY(-6px); border-color: rgba(14,165,233,0.35); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
-    .portfolio-img-wrap { position: relative; overflow: hidden; aspect-ratio: 16/9; }
-    .portfolio-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; display: block; }
+    .portfolio-img-wrap { position: relative; overflow: hidden; aspect-ratio: 16/9; width: 100%; }
+    .portfolio-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; display: block; max-width: 100%; }
     .portfolio-card:hover .portfolio-img-wrap img { transform: scale(1.06); }
     .portfolio-overlay {
       position: absolute; inset: 0; background: rgba(14,165,233,0.75);
@@ -978,9 +979,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
 <!-- MODAL: WORKDAY SUPPORT & TRAINING -->
 <div class="modal-backdrop" id="modal-workday-support" onclick="closeModal(event, 'modal-workday-support')">
   <div class="modal-box">
@@ -1085,6 +1083,9 @@
         <div class="portfolio-meta"><span>📅 Single image</span></div>
       </div>
     </div>
+
+  </div>
+</section>
 
 <!-- MODAL: MOBILE -->
 <div class="modal-backdrop" id="modal-mobile" onclick="closeModal(event, 'modal-mobile')">
