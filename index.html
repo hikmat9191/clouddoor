@@ -330,6 +330,42 @@
       .nav-cta { display: none; }
     }
 
+    /* ── TEAM ── */
+    .team-card {
+      background: var(--dark3); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.8rem 1.4rem; text-align: center;
+      transition: transform .25s, border-color .25s;
+    }
+    .team-card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,0.3); }
+    .team-avatar {
+      width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem;
+      background: var(--grad); display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 800; color: #fff;
+    }
+    .team-card h4 { font-size: 1rem; font-weight: 700; color: var(--light); margin-bottom: .2rem; }
+    .team-role { font-size: 0.78rem; color: var(--muted); margin-bottom: .8rem; }
+    .team-badges { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+    .team-badge {
+      font-size: 0.68rem; font-weight: 700; padding: 3px 9px; border-radius: 100px;
+      background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--muted);
+    }
+    .team-badge.gold { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.35); color: #f59e0b; }
+    .team-badge.blue { background: rgba(14,165,233,0.1); border-color: rgba(14,165,233,0.3); color: var(--primary); }
+
+    /* ── REVIEWS ── */
+    .review-card {
+      background: var(--dark3); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.8rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      transition: transform .25s, border-color .25s;
+    }
+    .review-card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,0.3); }
+    .review-stars { font-size: 1rem; letter-spacing: 2px; }
+    .review-text { font-size: 0.92rem; color: var(--text); line-height: 1.75; font-style: italic; flex: 1; }
+    .review-footer { border-top: 1px solid var(--border); padding-top: .9rem; }
+    .review-project { font-size: 0.82rem; font-weight: 700; color: var(--light); margin-bottom: .2rem; }
+    .review-meta { font-size: 0.75rem; color: var(--muted); }
+
     /* ── PORTFOLIO ── */
     .portfolio-grid {
       display: grid;
@@ -427,6 +463,8 @@
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#achievements">Projects</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -443,6 +481,8 @@
   <a href="#expertise" onclick="closeMobile()">Expertise</a>
   <a href="#why" onclick="closeMobile()">Why Us</a>
   <a href="#achievements" onclick="closeMobile()">Projects</a>
+  <a href="#team" onclick="closeMobile()">Team</a>
+  <a href="#reviews" onclick="closeMobile()">Reviews</a>
   <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
   <a href="#skills" onclick="closeMobile()">Skills</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
@@ -471,10 +511,10 @@
       </a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num"><span>10</span>+</div><div class="stat-label">Years of Expertise</div></div>
-      <div class="stat"><div class="stat-num"><span>64</span></div><div class="stat-label">Projects Delivered</div></div>
-      <div class="stat"><div class="stat-num"><span>8</span></div><div class="stat-label">Service Domains</div></div>
-      <div class="stat"><div class="stat-num"><span>100</span>%</div><div class="stat-label">Client Focus</div></div>
+      <div class="stat"><div class="stat-num"><span>64</span></div><div class="stat-label">Jobs Completed</div></div>
+      <div class="stat"><div class="stat-num">$<span>60</span>K+</div><div class="stat-label">Total Earned</div></div>
+      <div class="stat"><div class="stat-num"><span>508</span></div><div class="stat-label">Hours Worked</div></div>
+      <div class="stat"><div class="stat-num"><span>5</span>.0 ⭐</div><div class="stat-label">Average Rating</div></div>
     </div>
   </div>
 </section>
@@ -757,6 +797,126 @@
     <span class="skill-pill">Vue.js</span>
     <span class="skill-pill">MySQL</span>
     <span class="skill-pill">PHP</span>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background:var(--dark2);padding:90px 5%;">
+  <div class="section-header center fade-up">
+    <span class="section-label">The People Behind the Work</span>
+    <h2 class="section-title">Our Team</h2>
+    <p class="section-sub">A team of Top Rated specialists — each with 100% Job Success on Upwork — delivering excellence across every domain.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.4rem;" class="stagger">
+
+    <div class="team-card">
+      <div class="team-avatar">H</div>
+      <h4>Hikmat U.</h4>
+      <p class="team-role">Business Manager</p>
+      <div class="team-badges">
+        <span class="team-badge gold">Top Rated Plus</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">M</div>
+      <h4>Mohsin A.</h4>
+      <p class="team-role">Business Manager</p>
+      <div class="team-badges">
+        <span class="team-badge blue">Top Rated</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">U</div>
+      <h4>Umair U.</h4>
+      <p class="team-role">Business Manager</p>
+      <div class="team-badges">
+        <span class="team-badge blue">Top Rated</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">H</div>
+      <h4>Hamza M.</h4>
+      <p class="team-role">Agency Member</p>
+      <div class="team-badges">
+        <span class="team-badge blue">Top Rated</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">A</div>
+      <h4>Aftab H.</h4>
+      <p class="team-role">Agency Member</p>
+      <div class="team-badges">
+        <span class="team-badge blue">Top Rated</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">N</div>
+      <h4>Nida U.</h4>
+      <p class="team-role">Agency Member</p>
+      <div class="team-badges">
+        <span class="team-badge blue">Top Rated</span>
+        <span class="team-badge">100% JSS</span>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:2rem;">
+    <p style="font-size:0.85rem;color:var(--muted);">Agency size: <strong style="color:var(--text);">11–50 workers</strong> &nbsp;·&nbsp; Founded: <strong style="color:var(--text);">2018</strong> &nbsp;·&nbsp; Hourly rate: <strong style="color:var(--text);">$30–$80/hr</strong> &nbsp;·&nbsp; Min. project: <strong style="color:var(--text);">$1K+</strong></p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" style="background:var(--dark);padding:90px 5%;">
+  <div class="section-header center fade-up">
+    <span class="section-label">Client Feedback</span>
+    <h2 class="section-title">What Clients Say</h2>
+    <p class="section-sub">Every review is earned. Here's what our clients have to say about working with Cloud Door.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;" class="stagger">
+
+    <div class="review-card">
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Umair did a great job as a Workday HCM Consultant. He knows configuration well and gave good support. Highly Recommended!"</p>
+      <div class="review-footer">
+        <div>
+          <div class="review-project">Workday HCM Consultant | Configuration &amp; Production Support</div>
+          <div class="review-meta">Mar 3 – Apr 1, 2026 &nbsp;·&nbsp; $880 Fixed Price</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Highly recommend Nida Ullah for full stack development. Clear communication and quality results."</p>
+      <div class="review-footer">
+        <div>
+          <div class="review-project">Senior Full Stack Developer for Custom Web Solutions</div>
+          <div class="review-meta">Feb 16 – Mar 24, 2026 &nbsp;·&nbsp; $1,600 Fixed Price</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Exceptional Workday reporting expertise. Delivered accurate, insightful reports on time — exactly what we needed."</p>
+      <div class="review-footer">
+        <div>
+          <div class="review-project">Workday Reporting Consultant</div>
+          <div class="review-meta">Feb 9 – Mar 15, 2026 &nbsp;·&nbsp; $2,500 Fixed Price</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
