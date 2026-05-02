@@ -979,41 +979,6 @@
       </div>
     </div>
 
-<!-- MODAL: WORKDAY SUPPORT & TRAINING -->
-<div class="modal-backdrop" id="modal-workday-support" onclick="closeModal(event, 'modal-workday-support')">
-  <div class="modal-box">
-    <button class="modal-close" onclick="document.getElementById('modal-workday-support').classList.remove('open');document.body.style.overflow=''">✕</button>
-    <!-- Image gallery -->
-    <div class="modal-gallery">
-      <div class="gallery-main">
-        <img id="gallery-support-main" src="portfolio-workday-support-1.png" alt="Workday Daily Support" class="modal-img" style="border-radius:20px 20px 0 0;cursor:default;" />
-      </div>
-      <div class="gallery-thumbs">
-        <img src="portfolio-workday-support-1.png" onclick="document.getElementById('gallery-support-main').src=this.src" class="gallery-thumb active" alt="img 1"/>
-        <img src="portfolio-workday-support-2.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 2"/>
-        <img src="portfolio-workday-support-3.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 3"/>
-      </div>
-    </div>
-    <div class="modal-body">
-      <span class="portfolio-cat">ERP / CRM Software</span>
-      <h2>Workday Daily Support &amp; Training</h2>
-      <p>This section highlights our agency's expertise in providing comprehensive Workday support and training services. We help organizations optimize their Workday environment, resolve daily issues efficiently, and empower teams with practical knowledge to maximize system utilization.</p>
-      <p><strong style="color:var(--light)">Our Workday Support &amp; Training Services Include:</strong></p>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
-        <li>✅ <strong>Daily Workday Support:</strong> Troubleshooting, issue resolution, and system monitoring</li>
-        <li>✅ <strong>Module Expertise:</strong> HCM Core, Reporting, Advanced Reporting, Recruiting, Talent &amp; Performance, Absence, Security, Benefits, Finance, and more</li>
-        <li>✅ <strong>User Assistance &amp; Guidance:</strong> Helping end-users navigate Workday efficiently</li>
-        <li>✅ <strong>Workday Training Programs:</strong> Customized sessions for HR, finance, and operations teams</li>
-        <li>✅ <strong>Process Optimization:</strong> Streamlining workflows and automating routine tasks</li>
-        <li>✅ <strong>Reporting &amp; Analytics Support:</strong> Assisting with standard and custom report creation</li>
-        <li>✅ <strong>Security &amp; Access Management:</strong> Ensuring proper roles, permissions, and compliance</li>
-        <li>✅ <strong>Knowledge Transfer:</strong> Providing documentation and tips for long-term self-sufficiency</li>
-      </ul>
-      <p>We ensure that every Workday solution we provide is timely, accurate, and tailored to client needs, enabling organizations to maximize their Workday investment and improve operational efficiency.</p>
-    </div>
-  </div>
-</div>
-
     <!-- CARD 3: MOBILE -->
     <div class="portfolio-card" onclick="openModal('modal-mobile')">
       <div class="portfolio-img-wrap">
@@ -1086,6 +1051,40 @@
 
   </div>
 </section>
+
+<!-- MODAL: WORKDAY SUPPORT & TRAINING -->
+<div class="modal-backdrop" id="modal-workday-support" onclick="closeModal(event, 'modal-workday-support')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-workday-support').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <div class="modal-gallery">
+      <div class="gallery-main">
+        <img id="gallery-support-main" src="portfolio-workday-support-1.png" alt="Workday Daily Support" class="modal-img" style="border-radius:20px 20px 0 0;cursor:default;" />
+      </div>
+      <div class="gallery-thumbs">
+        <img src="portfolio-workday-support-1.png" onclick="document.getElementById('gallery-support-main').src=this.src" class="gallery-thumb active" alt="img 1"/>
+        <img src="portfolio-workday-support-2.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 2"/>
+        <img src="portfolio-workday-support-3.png" onclick="document.getElementById('gallery-support-main').src=this.src;document.querySelectorAll('#modal-workday-support .gallery-thumb').forEach(t=>t.classList.remove('active'));this.classList.add('active')" class="gallery-thumb" alt="img 3"/>
+      </div>
+    </div>
+    <div class="modal-body">
+      <span class="portfolio-cat">ERP / CRM Software</span>
+      <h2>Workday Daily Support &amp; Training</h2>
+      <p>This section highlights our agency's expertise in providing comprehensive Workday support and training services. We help organizations optimize their Workday environment, resolve daily issues efficiently, and empower teams with practical knowledge to maximize system utilization.</p>
+      <p><strong style="color:var(--light)">Our Workday Support &amp; Training Services Include:</strong></p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;">
+        <li>✅ <strong>Daily Workday Support:</strong> Troubleshooting, issue resolution, and system monitoring</li>
+        <li>✅ <strong>Module Expertise:</strong> HCM Core, Reporting, Advanced Reporting, Recruiting, Talent &amp; Performance, Absence, Security, Benefits, Finance, and more</li>
+        <li>✅ <strong>User Assistance &amp; Guidance:</strong> Helping end-users navigate Workday efficiently</li>
+        <li>✅ <strong>Workday Training Programs:</strong> Customized sessions for HR, finance, and operations teams</li>
+        <li>✅ <strong>Process Optimization:</strong> Streamlining workflows and automating routine tasks</li>
+        <li>✅ <strong>Reporting &amp; Analytics Support:</strong> Assisting with standard and custom report creation</li>
+        <li>✅ <strong>Security &amp; Access Management:</strong> Ensuring proper roles, permissions, and compliance</li>
+        <li>✅ <strong>Knowledge Transfer:</strong> Providing documentation and tips for long-term self-sufficiency</li>
+      </ul>
+      <p>We ensure that every Workday solution we provide is timely, accurate, and tailored to client needs, enabling organizations to maximize their Workday investment and improve operational efficiency.</p>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL: MOBILE -->
 <div class="modal-backdrop" id="modal-mobile" onclick="closeModal(event, 'modal-mobile')">
